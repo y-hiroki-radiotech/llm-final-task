@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "llm-final-task"
+version = "0.1.0"
+description = ""
+authors = ["y-hiroki-radiotech <bnndd439@ybb.ne.jp>"]
+readme = "README.md"
+packages = [{include = "llm_final_task"}]
+
+[tool.poetry.dependencies]
+python = "^3.11.3"
+langchain-core = "0.3.0"
+langchain-community = "0.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
