@@ -1,4 +1,5 @@
 import time
+from vllm import LLM, SamplingParams
 
 class TwoStageThinking:
     def __init__(self, llm):
