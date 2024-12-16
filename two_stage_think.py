@@ -67,7 +67,6 @@ class TwoStageThinking:
         
         return self._generate_text(prompt)
 
-    @weave.op()
     def generate_complete_response(self, data):
         """
         完全な二段階思考プロセスを実行
