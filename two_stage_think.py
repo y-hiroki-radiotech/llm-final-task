@@ -81,22 +81,3 @@ class TwoStageThinking:
         time.sleep(1)
         second_result = self.second_thinking(data, first_result)
         return first_result, second_result
-
-# 使用例
-"""
-# クラスの初期化
-thinking_generator = TwoStageThinking(llm)
-
-# 単一データでの使用
-first_answer, second_answer = thinking_generator.generate_complete_response(data_row)
-
-# データフレームでの使用例
-results = []
-for row in tqdm(data.itertuples(), desc="生成中"):
-    first, second = thinking_generator.generate_complete_response(row)
-    results.append({
-        'first_thinking': first,
-        'second_thinking': second
-    })
-    time.sleep(3)  # レート制限
-"""
