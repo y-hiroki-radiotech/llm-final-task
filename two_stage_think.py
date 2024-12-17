@@ -11,8 +11,9 @@ class TwoStageThinking:
         """
         self.llm = llm
         self.sampling_params = SamplingParams(
-            repetition_penalty=1.1,
-            max_tokens=1028
+            repetition_penalty=1.2,
+            temperature=0.5,
+            max_tokens=2048
         )
 
     def _generate_text(self, prompt):
@@ -71,7 +72,7 @@ class TwoStageThinking:
         回答:　"""
 
         return self._generate_text(prompt)
-        
+
     def generate_complete_response(self, data, few_shot_example):
         """
         完全な二段階思考プロセスを実行
@@ -83,6 +84,5 @@ class TwoStageThinking:
             tuple: (一段階目の回答, 二段階目の回答)
         """
         first_result = self.first_thinking(data,  few_shot_example.split("->")[1])
-        time.sleep(2)
-        # second_result = self.second_thinking(data, first_result)
+        time.sleep(10)
         return first_result
