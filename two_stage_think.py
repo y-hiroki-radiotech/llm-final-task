@@ -85,5 +85,4 @@ class TwoStageThinking:
         first_result = self.first_thinking(data,  few_shot_example.split("->")[1])
         time.sleep(2)
         # second_result = self.second_thinking(data, first_result)
-        time.sleep(2)
         return first_result
