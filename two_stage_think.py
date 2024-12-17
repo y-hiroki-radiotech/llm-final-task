@@ -12,7 +12,7 @@ class TwoStageThinking:
         self.llm = llm
         self.sampling_params = SamplingParams(
             repetition_penalty=1.2,
-            temperature=0.5,
+            temperature=0.3,
             max_tokens=2048
         )
 
